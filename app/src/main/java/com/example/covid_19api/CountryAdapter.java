@@ -36,9 +36,11 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.UserItem
     @Override
     public void onBindViewHolder(UserItemViewHolder holder, int position) {
         Country country = countries.get(position);
+
         /*Picasso.with(context)
                 .load(u.avatar_url)
-                .into(holder.ivAvatar);*/
+                .into(holder.ivAvatar);*/ //load hình ảnh các quốc gia
+
         holder.country.setText("Quốc gia: " + country.country);
         holder.cases.setText("Tổng ca nhiễm: " + country.cases);
         holder.todayCases.setText("Ca nhiễm hôm nay: " + country.todayCases);
